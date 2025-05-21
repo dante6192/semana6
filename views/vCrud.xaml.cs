@@ -25,4 +25,16 @@ public partial class vCrud : ContentPage
 		_estudiante = new ObservableCollection<Estudiante> ( lista );
 		lvEstudiante.ItelSource = _estudiante;
 	}
+
+    private void Nuevo_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new anadirEstudiante());
+
+    }
+
+    private void lvEstudiante_ItemSelect(object sender, SelectedItemChangedEventArgs e)
+    {
+		var objEstudiante = (Estudiante)e.SelectedItem;
+		Navigation.PushAsync(new vEliminar_Estudiante(objEstudiante));
+    }
 }

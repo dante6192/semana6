@@ -9,7 +9,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <ListView x:Name="lvEstudiante">
+        <ListView x:Name="lvEstudiante" ItemSelected="lvEstudiante_ItemSelect">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -17,11 +17,16 @@
                             <Label x:Name="lblNombre"
                                    Text="{Binding nombre}"/>
                             <Label x:Name="lblApellido"
-                                   Text="{Binding Apellido}"
+                                   Text="{Binding Apellido}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button x:Name="Nuevo"
+                Text="Nuevo estudiante"
+                Clicked="Nuevo_Clicked"/>
+
+
     </VerticalStackLayout>
 </ContentPage>

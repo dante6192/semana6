@@ -72,7 +72,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="views\anadirEstudiante.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="views\vCrud.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="views\vEliminar Estudiante.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
